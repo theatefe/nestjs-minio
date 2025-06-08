@@ -1,0 +1,6 @@
+{
+  "closeTicketPeriodDays": 7,
+  "pinLoadDaysCount": 7,
+  "trunLoadsHours": 2,
+  "vipListTimeOutHours": 5
+}

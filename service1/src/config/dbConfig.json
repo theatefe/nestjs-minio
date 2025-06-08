@@ -1,0 +1,23 @@
+{
+  "development": {
+    "username": "minio_api",
+    "password": "",
+    "database": "minio_api_development",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  },
+  "test": {
+    "username": "minio_api",
+    "password": "minio_api",
+    "database": "minio_api_db",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  },
+  "production": {
+    "username": "minio_api",
+    "password": "",
+    "database": "minio_api_production",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  }
+}
