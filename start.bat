@@ -1,6 +1,6 @@
 @echo off
 
-docker-compose -f docker-compose up -d
+docker-compose -f docker-compose.yml up -d
 timeout /t 10
 cd service1
 call yarn install  

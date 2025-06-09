@@ -1,4 +1,4 @@
-import { Injectable, Inject, NotFoundException } from '@nestjs/common';
+import { Injectable, Inject } from '@nestjs/common';
 import { Client } from 'minio';
 import { v4 as uuidv4 } from 'uuid';
 // DataAccess ****************************************************

@@ -2,25 +2,20 @@ import { SequelizeModule } from '@nestjs/sequelize';
 import * as Models from '../models';
 import { Op } from 'sequelize';
 
-import * as dbConfig from '../config/dbConfig.json';
-//const env = process.env.NODE_ENV.toLowerCase();
-const env = 'test'.toLowerCase();
-
 const allModels = [];
 Object.keys(Models).forEach((model) => {
   allModels.push(Models[model]);
 });
 export default SequelizeModule.forRoot({
-  dialect: dbConfig[env].dialect,
-  host: dbConfig[env].host,
-  port: dbConfig[env].port,
-  username: dbConfig[env].username,
-  password: dbConfig[env].password,
-  database: dbConfig[env].database,
-  models: allModels,
+  storage: './my_db.sqlite',
+  dialect: 'sqlite',
   autoLoadModels: true,
   synchronize: true,
+  models: allModels,
   logging: false,
+  define: {
+    timestamps: false,
+  },
   operatorsAliases: {
     $eq: Op.eq,
     $ne: Op.ne,
